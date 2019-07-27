@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tabs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Top Stories</string>
+    <string name="tech_stories">Tech Stories</string>
+    <string name="cooking_tips">Cooking tips</string>
+    <string name = "test">Test</string>
+</resources>

@@ -1,3 +1,5 @@
+/*App uses ScrollView to show a lengthy article about git(unformatted) and a dummy button */
+
 package com.example.scrollingtext;
 
 import android.content.Context;

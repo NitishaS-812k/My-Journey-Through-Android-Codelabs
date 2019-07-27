@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dialog Alert</string>
+    <string name="click_button_for_alert">click button for alert</string>
+    <string name="alert">Alert</string>
+</resources>

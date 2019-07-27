@@ -1,0 +1,35 @@
+package com.example.asynctask;
+
+import android.os.AsyncTask;
+import android.widget.TextView;
+
+import java.lang.ref.WeakReference;
+import java.util.Random;
+
+public class SimpleAsyncTask extends AsyncTask<Void, Void, String> {
+    private WeakReference<TextView> mTextView;
+
+    SimpleAsyncTask(TextView tv) {
+        mTextView = new WeakReference<>(tv);    //using an ordinary text view can cause a memory leak
+    }
+
+    @Override
+    protected String doInBackground(Void... voids) {
+        Random r = new Random();
+        int n = r.nextInt(11);
+        int s = n*200;
+        try{
+            Thread.sleep(s);
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+        return "Awake after sleeping for " + s + "milliseconds";
+    }
+
+    //TODO display curent time process has been sleeping
+
+    protected void onPostExecute(String result) {
+        mTextView.get().setText(result);
+    }
+}
